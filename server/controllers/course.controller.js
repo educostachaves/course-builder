@@ -32,7 +32,7 @@ export function addCourse(req, res) {
   const newCourse = new Course(req.body.course);
 
   // Sanitize inputs, except description param
-  newCourse.name = sanitizeHtml(newCourse.title);
+  newCourse.name = sanitizeHtml(newCourse.name);
   newCourse.subtitle = sanitizeHtml(newCourse.subtitle);
   newCourse.price = sanitizeHtml(newCourse.price);
   newCourse.duration = sanitizeHtml(newCourse.duration);
@@ -69,6 +69,7 @@ export function getCourse(req, res) {
  * @returns void
  */
 export function deleteCourse(req, res) {
+  console.log(req.params.cuid);
   Course.findOne({ cuid: req.params.cuid }).exec((err, course) => {
     if (err) {
       res.status(500).send(err);

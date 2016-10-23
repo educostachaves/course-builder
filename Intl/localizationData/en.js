@@ -1,17 +1,14 @@
 export default {
   locale: 'en',
   messages: {
-    siteTitle: 'MERN Starter Blog',
-    addPost: 'Add Post',
+    siteTitle: 'Course Builder',
     addCourse: 'Add Course',
     switchLanguage: 'Switch Language',
     twitterMessage: 'We are on Twitter',
     by: 'By',
-    deletePost: 'Delete Post',
-    createNewPost: 'Create new post',
+    deleteCourse: 'Delete Course',
+    createNewCourse: 'Create new Course',
     authorName: 'Author\'s Name',
-    postTitle: 'Post Title',
-    postContent: 'Post Content',
     submit: 'Submit',
     comment: `user {name} {value, plural,
     	  =0 {does not have any comments}

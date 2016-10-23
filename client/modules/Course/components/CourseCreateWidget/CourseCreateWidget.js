@@ -6,7 +6,7 @@ import styles from './CourseCreateWidget.css';
 
 export class CourseCreateWidget extends Component {
   addCourse = () => {
-    const nameRef = this.refs.name;
+    const nameRef = this.refs.nameCourse;
     const subtitleRef = this.refs.subtitle;
     const descriptionRef = this.refs.description;
     const priceRef = this.refs.price;
@@ -23,7 +23,7 @@ export class CourseCreateWidget extends Component {
       <div className={cls}>
         <div className={styles['form-content']}>
           <h2 className={styles['form-title']}><FormattedMessage id="createNewCourse" /></h2>
-          <input type="text" placeholder="Type the course Name" className={styles['form-field']} ref="name" />
+          <input type="text" placeholder="Type the course Name" className={styles['form-field']} ref="nameCourse" />
           <input type="text" placeholder="Type the course Subtitle" className={styles['form-field']} ref="subtitle" />
           <input type="number" step="2" placeholder="Type the course Price" className={styles['form-field']} ref="price" />
           <input type="number" step="1" placeholder="Type the course Duration" className={styles['form-field']} ref="duration" />

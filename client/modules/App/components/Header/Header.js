@@ -24,11 +24,6 @@ export function Header(props, context) {
         </h1>
         {
           context.router.isActive('/', true)
-            ? <a className={styles['add-post-button']} href="#" onClick={props.toggleAddPost}><FormattedMessage id="addPost" /></a>
-            : null
-        }
-        {
-          context.router.isActive('/', true)
             ? <a className={styles['add-course-button']} href="#" onClick={props.toggleAddCourse}><FormattedMessage id="addCourse" /></a>
             : null
         }
@@ -42,7 +37,6 @@ Header.contextTypes = {
 };
 
 Header.propTypes = {
-  toggleAddPost: PropTypes.func.isRequired,
   toggleAddCourse: PropTypes.func.isRequired,
   switchLanguage: PropTypes.func.isRequired,
   intl: PropTypes.object.isRequired,

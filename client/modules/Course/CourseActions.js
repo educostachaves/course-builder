@@ -3,7 +3,7 @@ import callApi from '../../util/apiCaller';
 // Export Constants
 export const ADD_COURSE = 'ADD_COURSE';
 export const ADD_COURSES = 'ADD_COURSES';
-export const DELETE_POST = 'DELETE_POST';
+export const DELETE_COURSE = 'DELETE_COURSE';
 
 // Export Actions
 export function addCourse(course) {
@@ -15,10 +15,11 @@ export function addCourse(course) {
 
 export function addCourseRequest(course) {
   return (dispatch) => {
+    console.log(course);
     return callApi('courses', 'post', {
       course: {
         name: course.name,
-        subtitile: course.subtitle,
+        subtitle: course.subtitle,
         description: course.description,
         price: course.price,
         duration: course.duration,
@@ -29,12 +30,13 @@ export function addCourseRequest(course) {
 
 export function addCourses(courses) {
   return {
-    type: ADD_COURSE,
+    type: ADD_COURSES,
     courses,
   };
 }
 
 export function fetchCourses() {
+  console.log('fetchCourses');
   return (dispatch) => {
     return callApi('courses').then(res => {
       dispatch(addCourses(res.courses));

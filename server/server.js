@@ -32,7 +32,6 @@ import Helmet from 'react-helmet';
 // Import required modules
 import routes from '../client/routes';
 import { fetchComponentData } from './util/fetchData';
-import posts from './routes/post.routes';
 import courses from './routes/course.routes';
 import chapters from './routes/chapter.routes';
 import contents from './routes/content.routes';
@@ -58,7 +57,6 @@ app.use(compression());
 app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
 app.use(Express.static(path.resolve(__dirname, '../dist')));
-app.use('/api', posts);
 app.use('/api', courses);
 app.use('/api', chapters);
 app.use('/api', contents);

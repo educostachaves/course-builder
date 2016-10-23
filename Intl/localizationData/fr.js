@@ -1,17 +1,14 @@
 export default {
   locale: 'fr',
   messages: {
-    siteTitle: 'MERN blog de démarrage',
-    addPost: 'Ajouter Poster',
-    addCourse: 'Ajouter Course',
+    siteTitle: 'Constructeur de cours',
+    addCourse: 'Ajouter Cours',
     switchLanguage: 'Changer de langue',
     twitterMessage: 'Nous sommes sur Twitter',
     by: 'Par',
-    deletePost: 'Supprimer le message',
-    createNewPost: 'Créer un nouveau message',
+    deleteCourse: 'Supprimer le cours',
+    createNewCourse: 'Créer un nouveau cours',
     authorName: 'Nom de l\'auteur',
-    postTitle: 'Titre de l\'article',
-    postContent: 'Contenu après',
     submit: 'Soumettre',
     comment: `user {name} {value, plural,
     	  =0 {does not have any comments}

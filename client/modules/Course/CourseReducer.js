@@ -17,7 +17,7 @@ const CourseReducer = (state = initialState, action) => {
 
     case DELETE_COURSE :
       return {
-        data: state.data.filter(post => course.cuid !== action.cuid),
+        data: state.data.filter(course => course.cuid !== action.cuid),
       };
 
     default:
